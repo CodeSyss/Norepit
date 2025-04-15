@@ -1,0 +1,80 @@
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
+      <h2 class="text-2xl font-bold text-center text-gray-900">Iniciar Sesión</h2> <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="space-y-6">
+  
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label> <input
+            id="email"
+            formControlName="email"
+            type="email"
+            required
+            class="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            [ngClass]="{ 'border-red-500': submitted && f['email'].errors }">
+          @if (submitted && f['email'].errors) {
+            <div class="mt-1 text-xs text-red-600">
+              @if (f['email'].errors['required']) {
+                <div>El correo es requerido.</div> }
+              @if (f['email'].errors['email']) {
+                <div>Por favor ingresa un correo válido.</div> }
+            </div>
+          }
+        </div>
+  
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label> <input
+            id="password"
+            formControlName="password"
+            type="password"
+            required
+            class="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            [ngClass]="{ 'border-red-500': submitted && f['password'].errors }">
+           @if (submitted && f['password'].errors) {
+            <div class="mt-1 text-xs text-red-600">
+              @if (f['password'].errors['required']) {
+                <div>La contraseña es requerida.</div> }
+            </div>
+          }
+        </div>
+  
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <input
+              id="remember-me"
+              formControlName="rememberMe"
+              type="checkbox"
+              class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"> <label for="remember-me" class="block ml-2 text-sm text-gray-900">Recordarme</label> </div>
+          <div class="text-sm">
+            <a href="#" class="font-medium text-blue-600 hover:text-blue-700">¿Olvidaste tu contraseña?</a> </div>
+        </div>
+  
+        <div>
+          <button
+            type="submit"
+            class="w-full px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"> Iniciar Sesión
+          </button>
+        </div>
+  
+        <div class="relative my-6">
+          <div class="absolute inset-0 flex items-center" aria-hidden="true">
+            <div class="w-full border-t border-gray-300"></div>
+          </div>
+          <div class="relative flex justify-center text-sm">
+            <span class="px-2 text-gray-500 bg-white">O continuar con</span> </div>
+        </div>
+  
+        <div>
+          <button
+            type="button"
+            (click)="signInWithGoogle()"
+            class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"> <svg class="w-5 h-5 mr-2 -ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+               <path d="M19.6 10.23c0-.64-.06-1.25-.16-1.84H10v3.48h5.38c-.23 1.13-.94 2.08-1.9 2.71v2.26h2.9c1.7-1.56 2.68-3.88 2.68-6.61z"/> <path d="M10 20c2.7 0 4.96-.88 6.62-2.38l-2.9-2.26c-.9.6-2.05.96-3.72.96-2.86 0-5.28-1.93-6.14-4.5H.96v2.34C2.72 17.75 6.09 20 10 20z"/> <path d="M3.86 12.18c-.16-.48-.25-.99-.25-1.5s.09-1.02.25-1.5V6.84H.96C.36 8.05 0 9.25 0 10.68s.36 2.63.96 3.84l2.9-2.34z"/> <path d="M10 3.98c1.47 0 2.78.5 3.82 1.48l2.58-2.58C14.96.96 12.7 0 10 0 6.09 0 2.72 2.25.96 5.66l2.9 2.34C4.72 5.9 7.14 3.98 10 3.98z"/>
+            </svg>
+            Google
+          </button>
+        </div>
+  
+      </form> <p class="mt-6 text-sm text-center text-gray-600">
+        ¿No eres miembro?
+        <a href="#" class="font-medium text-blue-600 hover:text-blue-700">Comienza una prueba gratuita de 14 días</a> </p>
+  
+    </div> </div> 

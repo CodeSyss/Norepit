@@ -14,3 +14,4 @@ export const routes: Routes = [
   { path: 'tutorProfile', component: TutorprofileComponent },
   { path: 'tutorClass', component: TutorclassComponent },
 ];
+

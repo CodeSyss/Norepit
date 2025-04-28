@@ -1,23 +1,26 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { LandingPageComponent } from './pages/landing-page/landing-page.component';
-import { LoginComponent } from './components/login/login.component'; // Import the login component
-import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-root',
-  imports: [
-    RouterOutlet,
-    HeaderComponent,
-    LandingPageComponent,
-    FooterComponent,
-    LoginComponent,
-    SignUpComponent,
-  ],
+  imports: [HeaderComponent, RouterOutlet, FooterComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'frontend';
+  hideHeaderFooter: boolean = false;
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    this.router.events.subscribe(() => {
+      // Condición para ocultar header/footer
+      const currentRoute = this.router.url;
+      this.hideHeaderFooter =
+        currentRoute === '/login' || currentRoute === '/register';
+    });
+  }
 }

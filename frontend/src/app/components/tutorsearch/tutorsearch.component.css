@@ -1,0 +1,16 @@
+body { font-family: 'Inter', sans-serif; }
+/* Estilos foco para inputs (opcional, mejora visibilidad) */
+input:focus, select:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    --tw-ring-color: #2563eb;
+    box-shadow: 0 0 0 1px var(--tw-ring-color);
+    border-color: #2563eb;
+}
+/* Estilo simple para estrellas SVG */
+.star-rating svg {
+    display: inline-block;
+    width: 1rem; /* w-4 */
+    height: 1rem; /* h-4 */
+    color: #facc15; /* text-yellow-400 */
+}

@@ -1,0 +1,284 @@
+<div class="min-h-screen bg-gray-100">
+  <main class="flex-grow container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-gray-800 mb-6">
+      Encuentra tu Tutor Ideal
+    </h1>
+
+    <div
+      class="mb-8 p-4 bg-white rounded-lg shadow-sm flex flex-col md:flex-row gap-4 items-center"
+    >
+      <div class="flex-grow w-full">
+        <label for="search-term" class="sr-only"
+          >Buscar por materia o tutor</label
+        >
+        <input
+          type="text"
+          id="search-term"
+          placeholder="Buscar por materia o tutor..."
+          class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+        />
+      </div>
+      <div class="flex-shrink-0 w-full md:w-auto">
+        <label for="subject-filter" class="sr-only">Filtrar por materia</label>
+        <select
+          id="subject-filter"
+          class="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-md focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white"
+        >
+          <option value="">Todas las Materias</option>
+          <option value="calculo">Cálculo Diferencial</option>
+          <option value="fisica">Física Mecánica</option>
+          <option value="quimica">Química General</option>
+          <option value="programacion">Programación Básica</option>
+        </select>
+      </div>
+      <button
+        class="w-full md:w-auto flex-shrink-0 bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2 rounded-md transition duration-150"
+      >
+        Buscar
+      </button>
+    </div>
+
+    <div>
+      <p class="text-sm text-gray-600 mb-4">Mostrando 6 tutores</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
+        >
+          <div class="p-5">
+            <div class="flex items-center space-x-4 mb-4">
+              <img
+                class="h-16 w-16 rounded-full object-cover"
+                src="https://placehold.co/64x64/D1C4E9/673AB7?text=LR"
+                alt="Foto de Luis R."
+              />
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900">Luis R.</h3>
+                <p class="text-xs text-gray-500">Verificado por Norepit</p>
+              </div>
+            </div>
+            <div class="mb-3">
+              <p class="text-sm font-medium text-gray-700 mb-1">Materias:</p>
+              <div class="flex flex-wrap gap-1">
+                <span
+                  class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full"
+                  >Cálculo</span
+                >
+                <span
+                  class="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full"
+                  >Álgebra</span
+                >
+              </div>
+            </div>
+            <div class="mb-4 star-rating flex items-center">
+              <svg fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                ></path>
+              </svg>
+              <svg fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                ></path>
+              </svg>
+              <svg fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                ></path>
+              </svg>
+              <svg fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                ></path>
+              </svg>
+              <svg fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545L10 15zm0-2.34l4.05 2.13-.77-4.5 3.27-3.19-4.52-.66L10 2.36 7.97 6.45l-4.52.66 3.27 3.19-.77 4.5L10 12.66z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="text-xs text-gray-500 ml-1">(4.5)</span>
+            </div>
+            <p class="text-sm text-gray-600 mb-4 line-clamp-2">
+              Ingeniero con 5+ años de experiencia ayudando a estudiantes a
+              dominar el cálculo.
+            </p>
+            <button
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-md transition duration-150"
+            >
+              Ver Perfil
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
+        >
+          <div class="p-5">
+            <div class="flex items-center space-x-4 mb-4">
+              <img
+                class="h-16 w-16 rounded-full object-cover"
+                src="https://placehold.co/64x64/C8E6C9/4CAF50?text=AC"
+                alt="Foto de Adriana C."
+              />
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900">Adriana C.</h3>
+                <p class="text-xs text-gray-500">Verificado por Norepit</p>
+              </div>
+            </div>
+            <div class="mb-3">
+              <p class="text-sm font-medium text-gray-700 mb-1">Materias:</p>
+              <div class="flex flex-wrap gap-1">
+                <span
+                  class="text-xs bg-red-100 text-red-800 px-2 py-0.5 rounded-full"
+                  >Química</span
+                >
+                <span
+                  class="text-xs bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full"
+                  >Biología</span
+                >
+              </div>
+            </div>
+            <div class="mb-4 star-rating flex items-center">
+              <svg fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                ></path>
+              </svg>
+              <svg fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                ></path>
+              </svg>
+              <svg fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                ></path>
+              </svg>
+              <svg fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                ></path>
+              </svg>
+              <svg fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                ></path>
+              </svg>
+              <span class="text-xs text-gray-500 ml-1">(5.0)</span>
+            </div>
+            <p class="text-sm text-gray-600 mb-4 line-clamp-2">
+              Apasionada por la química, ayudo a entenderla desde cero.
+              Paciencia y claridad garantizadas.
+            </p>
+            <button
+              [routerLink]="['/tutorProfile']"
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-md transition duration-150"
+            >
+              Ver Perfil
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
+        >
+          <div class="p-5">
+            <div class="flex items-center space-x-4 mb-4">
+              <img
+                class="h-16 w-16 rounded-full object-cover"
+                src="https://placehold.co/64x64/BBDEFB/2196F3?text=MG"
+                alt="Foto de Martín G."
+              />
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900">Martín G.</h3>
+                <p class="text-xs text-gray-500">Verificado por Norepit</p>
+              </div>
+            </div>
+            <div class="mb-3">
+              <p class="text-sm font-medium text-gray-700 mb-1">Materias:</p>
+              <div class="flex flex-wrap gap-1">
+                <span
+                  class="text-xs bg-indigo-100 text-indigo-800 px-2 py-0.5 rounded-full"
+                  >Programación</span
+                >
+                <span
+                  class="text-xs bg-pink-100 text-pink-800 px-2 py-0.5 rounded-full"
+                  >Python</span
+                >
+              </div>
+            </div>
+            <div class="mb-4 star-rating flex items-center">
+              <svg fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                ></path>
+              </svg>
+              <svg fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                ></path>
+              </svg>
+              <svg fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                ></path>
+              </svg>
+              <svg fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                ></path>
+              </svg>
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                ></path>
+              </svg>
+              <span class="text-xs text-gray-500 ml-1">(4.0)</span>
+            </div>
+            <p class="text-sm text-gray-600 mb-4 line-clamp-2">
+              Desarrollador de software con experiencia enseñando lógica de
+              programación y Python a principiantes.
+            </p>
+            <button
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-md transition duration-150"
+            >
+              Ver Perfil
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <nav
+        class="mt-8 flex items-center justify-between border-t border-gray-200 px-4 py-3 sm:px-6"
+        aria-label="Pagination"
+      >
+        <div class="hidden sm:block">
+          <p class="text-sm text-gray-700">
+            Mostrando <span class="font-medium">1</span> a
+            <span class="font-medium">6</span> de
+            <span class="font-medium">24</span> resultados
+          </p>
+        </div>
+        <div class="flex flex-1 justify-between sm:justify-end">
+          <a
+            href="#"
+            class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+            >Anterior</a
+          >
+          <a
+            href="#"
+            class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+            >Siguiente</a
+          >
+        </div>
+      </nav>
+    </div>
+  </main>
+</div>

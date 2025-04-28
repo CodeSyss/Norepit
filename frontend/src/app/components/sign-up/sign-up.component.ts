@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common'; // Needed for pipes like async, json etc. (even if using @if/@for)
 import { ReactiveFormsModule, FormGroup, FormControl, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 
@@ -19,7 +20,8 @@ export function passwordsMatchValidator(control: AbstractControl): ValidationErr
   standalone: true,
   imports: [
     CommonModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.css'

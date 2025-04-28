@@ -1,11 +1,12 @@
-<div class="bg-gray-50 pt-0">
+<div class="bg-gray-50 pt-0" id="servicios">
   <main class="container mx-auto px-6 py-16 space-y-10">
     <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
       ¿Cómo funciona Norepit?
     </h2>
     <div class="grid md:grid-cols-3 gap-8">
       <div
-        class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+        [routerLink]="['/tutorSearch']"
+        class="cursor-pointer rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
       >
         <div
           class="bg-blue-100 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-4"
@@ -88,7 +89,7 @@
       class="mt-12 text-center bg-blue-50 p-6 rounded-lg border border-blue-100 shadow-sm max-w-4xl mx-auto"
     >
       <p class="text-lg md:text-xl font-medium text-blue-800">
-        Y no solo conectas con tutores: también te ofrecemos
+        Y no solo conectas con tutores: también te ofreceremos más adelante
         <span class="font-semibold text-blue-700"
           >guías de estudio, recursos clave</span
         >

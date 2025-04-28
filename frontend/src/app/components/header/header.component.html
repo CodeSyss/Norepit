@@ -3,37 +3,40 @@
     <div class="flex items-center space-x-3">
       <img src="icons/hola.png" alt="Logo Norepit" class="h-12 w-auto" />
       <span class="text-2xl font-bold tracking-wide hidden sm:inline"
-        >Norepit</span
+        >NOREPIT</span
       >
     </div>
 
     <nav class="hidden md:flex space-x-8 font-medium text-base">
       <a
-        href="#"
-        class="hover:text-blue-300 transition-colors duration-200 active-link"
+        [routerLink]="['/']"
+        class="cursor-pointer hover:text-blue-300 transition-colors duration-200 active-link"
         >Inicio</a
       >
-      <a href="#" class="hover:text-blue-300 transition-colors duration-200"
+      <a
+        class="cursor-pointer hover:text-blue-300 transition-colors duration-200"
         >Tutores</a
       >
-      <a href="#" class="hover:text-blue-300 transition-colors duration-200"
-        >Consejos</a
+      <a
+        class="cursor-pointer hover:text-blue-300 transition-colors duration-200"
+        >Servicios</a
       >
-      <a href="#" class="hover:text-blue-300 transition-colors duration-200"
+      <a
+        class="cursor-pointer hover:text-blue-300 transition-colors duration-200"
         >Materias</a
       >
     </nav>
 
     <div class="flex items-center space-x-5">
       <a
-        href="#"
-        class="hidden sm:inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 tracking-tight rounded-lg shadow-sm transition duration-200"
+        [routerLink]="['/register']"
+        class="cursor-pointer hidden sm:inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 tracking-tight rounded-lg shadow-sm transition duration-200"
       >
         Registrarse
       </a>
       <a
-        href="#"
-        class="hidden sm:inline-block text-blue-100 hover:text-blue-300 font-medium tracking-tight transition-colors duration-200"
+        [routerLink]="['/login']"
+        class="cursor-pointer hidden sm:inline-block text-blue-100 hover:text-blue-300 font-medium tracking-tight transition-colors duration-200"
       >
         Iniciar sesión
       </a>
@@ -58,39 +61,39 @@
       </button>
     </div>
   </div>
-  <div class="md:hidden hidden bg-blue-900" id="mobile-menu">
+  <div class="cursor-pointer md:hidden hidden bg-blue-900" id="mobile-menu">
     <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-blue-800">
       <a
-        href="#"
-        class="block px-3 py-2 rounded-md text-base font-medium text-blue-100 hover:text-white hover:bg-blue-800"
+        class="cursor-pointer block px-3 py-2 rounded-md text-base font-medium text-blue-100 hover:text-white hover:bg-blue-800"
         >Inicio</a
       >
       <a
-        href="#"
-        class="block px-3 py-2 rounded-md text-base font-medium text-blue-100 hover:text-white hover:bg-blue-800"
+        class="cursor-pointer block px-3 py-2 rounded-md text-base font-medium text-blue-100 hover:text-white hover:bg-blue-800"
         >Tutores</a
       >
       <a
-        href="#"
-        class="block px-3 py-2 rounded-md text-base font-medium text-blue-100 hover:text-white hover:bg-blue-800"
-        >Consejos</a
+        class="cursor-pointer block px-3 py-2 rounded-md text-base font-medium text-blue-100 hover:text-white hover:bg-blue-800"
+        >Servicios</a
       >
       <a
-        href="#"
-        class="block px-3 py-2 rounded-md text-base font-medium text-blue-100 hover:text-white hover:bg-blue-800"
+        class="cursor-pointer block px-3 py-2 rounded-md text-base font-medium text-blue-100 hover:text-white hover:bg-blue-800"
         >Materias</a
       >
       <hr class="my-2 border-blue-800" />
       <a
-        href="#"
-        class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-500 mb-2"
-        >Sign In</a
+        [routerLink]="['/register']"
+        class="cursor-pointer block w-full text-left px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-500 mb-2"
+        >Registrarse</a
       >
       <a
-        href="#"
-        class="block px-3 py-2 rounded-md text-base font-medium text-blue-100 hover:text-white hover:bg-blue-800"
-        >Log In</a
+        [routerLink]="['/login']"
+        class="cursor-pointer block px-3 py-2 rounded-md text-base font-medium text-blue-100 hover:text-white hover:bg-blue-800"
+        >Iniciar sesión</a
       >
     </nav>
   </div>
 </header>
+
+<!-- fragment="inicio"
+[routerLink]="['/']"
+id="inicio" -->

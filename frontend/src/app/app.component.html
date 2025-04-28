@@ -1,12 +1,9 @@
-<!-- <app-login> </app-login> -->
+<app-header *ngIf="!hideHeaderFooter"></app-header>
 
-<app-sign-up></app-sign-up>
-
-<!-- <app-header></app-header>
-<main>
+<main class="min-h-screen">
   <router-outlet></router-outlet>
 </main>
 
-<app-landing-page></app-landing-page>
+<app-footer *ngIf="!hideHeaderFooter"></app-footer>
 
-<app-footer></app-footer> -->
+

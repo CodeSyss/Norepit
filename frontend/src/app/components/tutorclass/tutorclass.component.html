@@ -1,0 +1,113 @@
+<div class="font-inter bg-gray-50">
+    <div class="container mx-auto p-6 bg-gray-100 rounded-lg shadow-md py-20">
+        <h1 class="text-3xl font-semibold text-blue-700 mb-6 text-center">Programar una Clase con Juan Pérez</h1>
+
+        <div class="bg-gray-50 rounded-lg p-4 mb-6 border border-blue-100">
+            <div class="flex items-center">
+                <img src="https://placehold.co/80x80/EEE/31343C" alt="Foto del Tutor" class="rounded-full mr-4">
+                <div>
+                    <h2 class="text-xl font-semibold text-blue-700">Juan Pérez</h2>
+                    <p class="text-gray-600">Ingeniero en Sistemas</p>
+                </div>
+            </div>
+            <p class="text-gray-700 mt-2">
+                ¡Hola! Estoy aquí para ayudarte con tus necesidades de aprendizaje. Selecciona una fecha y hora para que comencemos.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">Fecha</h2>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <input type="date" id="datepicker" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" placeholder="Seleccionar fecha">
+                </div>
+            </div>
+            <div>
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">Hora</h2>
+                <div class="relative">
+                    <select id="timepicker" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                        <option value="" disabled selected>Seleccionar hora</option>
+                        <option value="09:00">09:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="13:00">01:00 PM</option>
+                        <option value="14:00">02:00 PM</option>
+                        <option value="15:00">03:00 PM</option>
+                        <option value="16:00">04:00 PM</option>
+                        <option value="17:00">05:00 PM</option>
+                        <option value="18:00">06:00 PM</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">Detalles de la Clase</h2>
+            <textarea id="classDetails" placeholder="Por favor, proporciona detalles sobre lo que te gustaría cubrir en la clase..." class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 h-32"></textarea>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-6 mb-6 border border-gray-200">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">Resumen de la Reserva</h2>
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-gray-700 font-medium">Tutor:</span>
+                <span class="text-blue-700 font-semibold">Juan Pérez</span>
+            </div>
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-gray-700 font-medium">Fecha:</span>
+                <span id="selectedDate" class="text-blue-700 font-semibold">-</span>
+            </div>
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-gray-700 font-medium">Hora:</span>
+                <span id="selectedTime" class="text-blue-700 font-semibold">-</span>
+            </div>
+            <div class="flex justify-between items-center">
+                <span class="text-gray-700 font-medium">Detalles:</span>
+                <span id="classDetailsSummary" class="text-blue-700 font-semibold">-</span>
+            </div>
+        </div>
+
+        <div class="flex justify-center mt-6">
+            <button id="confirmBooking" class="bg-gradient-to-r from-blue-400 to-blue-900 hover:from-blue-900 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-md transition duration-300 ease-in-out">
+                <i class="fa-calendar-check mr-2"></i> Confirmar Reserva
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const datepicker = document.getElementById('datepicker');
+        const timepicker = document.getElementById('timepicker');
+        const confirmBooking = document.getElementById('confirmBooking');
+        const selectedDateSpan = document.getElementById('selectedDate');
+        const selectedTimeSpan = document.getElementById('selectedTime');
+        const classDetailsSpan = document.getElementById('classDetailsSummary');
+        const classDetailsInput = document.getElementById('classDetails');
+
+        datepicker.addEventListener('change', () => {
+            selectedDateSpan.textContent = datepicker.value;
+        });
+
+        timepicker.addEventListener('change', () => {
+            selectedTimeSpan.textContent = timepicker.value;
+        });
+
+        classDetailsInput.addEventListener('input', () => {
+            classDetailsSpan.textContent = classDetailsInput.value;
+        });
+
+        confirmBooking.addEventListener('click', () => {
+            if (datepicker.value && timepicker.value && classDetailsInput.value) {
+                alert(`Clase reservada con Juan Pérez para el ${datepicker.value} a las ${timepicker.value}. Detalles: ${classDetailsInput.value}`);
+                 // Aquí podrías agregar lógica para enviar la información al servidor
+            } else {
+                alert('Por favor, selecciona la fecha, hora y detalles de la clase.');
+            }
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/f5c43e91ed.js" crossorigin="anonymous"></script>
+</div>

@@ -10,8 +10,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Ajuste preciso para compensar el header fijo */
-:target {
-  scroll-margin-top: 1rem; /* 80px - ajusta según la altura de tu header */
-}
 
+:target {
+  scroll-margin-top: 82px; /* Mismo valor que headerHeight */
+}
